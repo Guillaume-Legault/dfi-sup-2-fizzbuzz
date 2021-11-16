@@ -1,16 +1,19 @@
 let nombre = 0
-basic.forever(function () {
+loops.everyInterval(500, function () {
     for (let index = 0; index <= 100; index++) {
         nombre = index
     }
-    if (nombre % 3 == 0 && nombre % 5 == 0) {
-        basic.showString("FB")
-    } else if (nombre % 3 == 0) {
+    if (nombre % 3 == 0) {
         basic.showString("F")
     } else if (nombre % 5 == 0) {
         basic.showString("B")
+    } else if (nombre % 3 == 0 && nombre % 5 == 0) {
+        basic.showString("FB")
     } else {
-        basic.showNumber(nombre)
+    	
     }
-    basic.pause(100)
+    basic.showNumber(nombre)
+})
+basic.forever(function () {
+	
 })
